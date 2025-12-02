@@ -1,0 +1,61 @@
+model_params:
+  fingerprint_size: 2048      # Morgan fingerprint size
+  feature_size: 19            # Number of original molecular descriptors (will be auto-updated after encoding)
+  latent_size: 1024            # Latent space dimensionality
+  hidden_size: 512            # Hidden layer size
+  dropout: 0.2                # Dropout rate
+  encoder_n_layers: 2
+  decoder_n_layers: 1          # Number of layers in encoder/decoder
+  fusion_method: 'add' 
+
+# Feature processing
+feature_processing:
+  n_bins: 10                  # Number of bins for KBinsDiscretizer
+  encoding_strategy: 'uniform' # Strategy for binning: 'uniform', 'quantile', 'kmeans'
+
+# Training parameters
+training:
+  learning_rate: 0.001        # Learning rate
+  weight_decay: 0.00001       # Weight decay for regularization
+  batch_size: 1024              # Batch size for training
+  epochs: 1000                 # Number of training epochs
+  train_split: 0.8            # Train/validation split ratio
+  gradient_clip: 1.0          # Gradient clipping threshold
+
+# VAE-specific parameters
+vae:
+  beta_start: 0.0             # Initial beta value for KL loss
+  beta_increment: 0.0005        # Beta increment per epoch
+  
+# Hardware and performance
+hardware:
+  device: "cuda:0"            # Device: "cuda:0", "cuda:1", or "cpu"
+  num_jobs: 24                 # Number of parallel jobs for data processing
+  num_workers: 12              # Number of dataloader workers
+
+# Learning rate scheduler
+scheduler:
+  patience: 10                # Epochs to wait before reducing LR
+  factor: 0.5                 # Factor to reduce LR by
+
+# Early stopping
+early_stopping:
+  patience: 10                # Epochs to wait before early stopping
+  min_delta: 0.001            # Minimum change to qualify as improvement
+
+# Checkpointing
+checkpointing:
+  save_freq: 10               # Save checkpoint every N epochs
+  save_best: true             # Save best model based on validation loss
+
+# Logging and output
+logging:
+  log_level: "INFO"           # Logging level
+  log_to_file: true           # Whether to log to file
+
+# Data processing
+data:
+  num_jobs: 24                 # Number of parallel jobs for molecule processing
+  
+# Random seed for reproducibility
+seed: 42
