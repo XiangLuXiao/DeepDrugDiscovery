@@ -1,12 +1,12 @@
-# DeepNeuroprotectiveAutophagyEnhancer (DeepNAE)
+# DeepDrugDiscovery
 
-DeepNeuroprotectiveAutophagyEnhancer (DeepNAE) provides an end-to-end pipeline for learning molecular representations using a **variational autoencoder (VAE)** with **GRU-based feature fusion**, followed by downstream **diversity analyses**, **ligand-based virtual screening**, and ADMET-based compound prioritization.
+Deep Drug Discovery Platform provides an end-to-end pipeline for learning molecular representations using a **variational autoencoder (VAE)** with **GRU-based feature fusion**, followed by downstream **diversity analyses**, **ligand-based virtual screening**, and ADMET-based compound prioritization.
 
 If you prefer a hosted workflow, a production deployment is available at:
 **[https://deepdrugdiscovery.mindrank.ai/](https://deepdrugdiscovery.mindrank.ai/)**
 
 <p align="center">
-  <img src="picture/deepnae-1.png" alt="DeepNAE pipeline overview" width="800">
+  <img src="picture/deepnae-1.png" alt="Deep Drug Discovery pipeline overview" width="800">
 </p>
 
 ---
@@ -32,8 +32,8 @@ If you prefer a hosted workflow, a production deployment is available at:
 ## 2. Installation
 
 ```bash
-conda create -n deepnae python=3.10
-conda activate deepnae
+conda create -n DeepDrugDiscovery python=3.10
+conda activate DeepDrugDiscovery
 pip install -r requirements.txt
 ```
 
@@ -223,7 +223,7 @@ Follow these steps to replicate the results described in the manuscript:
    to reproduce ADMET prediction tables.
 
 6. **(Optional) Cloud-based reproduction**
-   You may also replicate similar results end-to-end through the hosted DeepNAE production platform: **[https://deepdrugdiscovery.mindrank.ai/](https://deepdrugdiscovery.mindrank.ai/)**
+   You may also replicate similar results end-to-end through the hosted DeepDrugDiscovery production platform: **[https://deepdrugdiscovery.mindrank.ai/](https://deepdrugdiscovery.mindrank.ai/)**
    This deployment uses the same pretrained models and back-end infrastructure as the manuscript.
 
 ---
