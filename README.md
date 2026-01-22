@@ -6,7 +6,7 @@ If you prefer a hosted workflow, a production deployment is available at:
 **[https://deepdrugdiscovery.mindrank.ai/](https://deepdrugdiscovery.mindrank.ai/)**
 
 <p align="center">
-  <img src="picture/deepnae-1.png" alt="Deep Drug Discovery pipeline overview" width="800">
+  <img src="picture/DeepDrugDiscovery.jpg" alt="Deep Drug Discovery pipeline overview" width="800">
 </p>
 
 ---
@@ -52,7 +52,9 @@ RDKit wheels supporting Linux and macOS are available via PyPI.
 The compound library, reference library, pretrained compound embeddings, and reference embeddings are publicly hosted on Figshare:
 
 **Dataset (Figshare):**
-[https://figshare.com/articles/dataset/Candidate_Compound_Library_for_DeepNAE_platform/30081430?file=57776389](https://figshare.com/articles/dataset/Candidate_Compound_Library_for_DeepNAE_platform/30081430?file=57776389)
+[Compound_Library_for_DeepDrugDiscovery_platform](https://figshare.com/articles/dataset/Compound_Library_for_DeepDrugDiscovery_platform/31123354)
+
+You may download all the files then save them into the ```data/processed_data/``` folder.
 
 The manuscript’s **ADMET benchmark dataset** is also bundled locally under:
 
@@ -60,13 +62,6 @@ The manuscript’s **ADMET benchmark dataset** is also bundled locally under:
 ADMET_benchmark/
 ```
 
-To download and extract the processed dataset:
-
-```bash
-mkdir -p data
-curl -L -A "Mozilla/5.0" -o data/processed_data.zip https://figshare.com/ndownloader/articles/30081430/versions/2
-unzip data/processed_data.zip -d data/processed_data
-```
 
 ### Key files in `data/processed_data/`:
 
